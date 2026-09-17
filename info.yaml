@@ -5,7 +5,7 @@ yaml_version: 6
 project:
   title: "Neurona LIF con Aprendizaje STDP Dinamico"
   author: "Tu Nombre"
-  discord: "tu_usuario_discord"
+  discord: "casandra6171"
   description: "Neurona artificial biologica con plasticidad configurable y monitoreo de peso en tiempo real."
   language: "Verilog"
   clock_hz: 10000000
