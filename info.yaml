@@ -1,7 +1,5 @@
-# Definición de la versión requerida por el parser de Tiny Tapeout
-yaml_version: 6
+# Tiny Tapeout project information
 
-# Información general del proyecto
 project:
   title: "Neurona LIF con Aprendizaje STDP Dinamico"
   author: "Casandra Saray Galiano Quillahuaman"
@@ -9,41 +7,46 @@ project:
   description: "Neurona artificial biologica con plasticidad configurable y monitoreo de peso en tiempo real."
   language: "Verilog"
   clock_hz: 10000000
-  tiles: "1x1"          # Tamaño del área en el chip (1x1 tile)
+  tiles: "1x1"
 
-# Archivos de entrada dentro de la carpeta src/
-source_files:
-  - project.v
-  - neuron_lif.v
-  - stdp_core.v
-top_module: "tt_um_example"
+  top_module: "tt_um_example"
 
-# Asignación y documentación de los Pines Físicos
-pinout:
-  ui:
-    - "Pulso de entrada externo (spike_pre)"
-    - "Bit 0 de configuracion de fuga (leak)"
-    - "Bit 1 de configuracion de fuga (leak)"
-    - "Bit 2 de configuracion de fuga (leak)"
-    - "Bit 3 de configuracion de fuga (leak)"
-    - "Bit 0 de ventana de tiempo STDP"
-    - "Bit 1 de ventana de tiempo STDP"
-    - "Bit 2 de ventana de tiempo STDP"
-  uo:
-    - "Pulso de salida de la neurona (spike_post)"
-    - "Bit 0 de monitoreo de peso sinaptico"
-    - "Bit 1 de monitoreo de peso sinaptico"
-    - "Bit 2 de monitoreo de peso sinaptico"
-    - "Bit 3 de monitoreo de peso sinaptico"
-    - "Bit 4 de monitoreo de peso sinaptico"
-    - "Bit 5 de monitoreo de peso sinaptico"
-    - "Pin no utilizado (fijado a 0)"
-  uio:
-    - "Bit 0 de configuracion de umbral (threshold)"
-    - "Bit 1 de configuracion de umbral (threshold)"
-    - "Bit 2 de configuracion de umbral (threshold)"
-    - "Bit 3 de configuracion de umbral (threshold)"
-    - "No utilizado (configurado como entrada)"
-    - "No utilizado (configurado como entrada)"
-    - "No utilizado (configurado como entrada)"
-    - "No utilizado (configurado como entrada)"
+  source_files:
+    - "project.v"
+    - "neuron_lif.v"
+    - "stdp_core.v"
+
+  pinout:
+
+    # Inputs
+    ui[0]: "Pulso de entrada externo spike_pre"
+    ui[1]: "Bit 0 de configuracion de fuga leak"
+    ui[2]: "Bit 1 de configuracion de fuga leak"
+    ui[3]: "Bit 2 de configuracion de fuga leak"
+    ui[4]: "Bit 3 de configuracion de fuga leak"
+    ui[5]: "Bit 0 de ventana de tiempo STDP"
+    ui[6]: "Bit 1 de ventana de tiempo STDP"
+    ui[7]: "Bit 2 de ventana de tiempo STDP"
+
+    # Outputs
+    uo[0]: "Pulso de salida de la neurona spike_post"
+    uo[1]: "Bit 0 de monitoreo de peso sinaptico"
+    uo[2]: "Bit 1 de monitoreo de peso sinaptico"
+    uo[3]: "Bit 2 de monitoreo de peso sinaptico"
+    uo[4]: "Bit 3 de monitoreo de peso sinaptico"
+    uo[5]: "Bit 4 de monitoreo de peso sinaptico"
+    uo[6]: "Bit 5 de monitoreo de peso sinaptico"
+    uo[7]: "Pin no utilizado"
+
+    # Bidirectional pins
+    uio[0]: "Bit 0 de configuracion de umbral threshold"
+    uio[1]: "Bit 1 de configuracion de umbral threshold"
+    uio[2]: "Bit 2 de configuracion de umbral threshold"
+    uio[3]: "Bit 3 de configuracion de umbral threshold"
+    uio[4]: ""
+    uio[5]: ""
+    uio[6]: ""
+    uio[7]: ""
+
+# Do not change!
+yaml_version: 6
