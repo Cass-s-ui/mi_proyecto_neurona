@@ -1,14 +1,23 @@
-# Información del Proyecto para Tiny Tapeout
-project:
-  title:        "Neurona LIF con Aprendizaje STDP Dinamico"
-  description:  "Neurona artificial biologica con plasticidad configurable y monitoreo de peso en tiempo real."
-  input_files:
-    - project.v
-    - neuron_lif.v
-    - stdp_core.v
-  top_module:   "tt_um_example"
+# Definición de la versión requerida por el parser de Tiny Tapeout
+yaml_version: 6
 
-# Documentación de los Pines Físicos
+# Información general del proyecto
+project:
+  title: "Neurona LIF con Aprendizaje STDP Dinamico"
+  author: "Tu Nombre"
+  discord: "tu_usuario_discord"
+  description: "Neurona artificial biologica con plasticidad configurable y monitoreo de peso en tiempo real."
+  language: "Verilog"
+  clock_hz: 10000000
+
+# Archivos de entrada dentro de la carpeta src/
+source_files:
+  - project.v
+  - neuron_lif.v
+  - stdp_core.v
+top_module: "tt_um_example"
+
+# Documentación de los Pines Físicos (exactamente 8 elementos por cada lista)
 documentation:
   inputs:
     - "Pulso de entrada externo (spike_pre)"
