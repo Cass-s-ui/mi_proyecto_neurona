@@ -1,0 +1,39 @@
+# Información del Proyecto para Tiny Tapeout
+project:
+  title:        "Neurona LIF con Aprendizaje STDP Dinamico"
+  description:  "Neurona artificial biologica con plasticidad configurable y monitoreo de peso en tiempo real."
+  input_files:
+    - project.v
+    - neuron_lif.v
+    - stdp_core.v
+  top_module:   "tt_um_example"
+
+# Documentación de los Pines Físicos
+documentation:
+  inputs:
+    - "Pulso de entrada externo (spike_pre)"
+    - "Bit 0 de configuracion de fuga (leak)"
+    - "Bit 1 de configuracion de fuga (leak)"
+    - "Bit 2 de configuracion de fuga (leak)"
+    - "Bit 3 de configuracion de fuga (leak)"
+    - "Bit 0 de ventana de tiempo STDP"
+    - "Bit 1 de ventana de tiempo STDP"
+    - "Bit 2 de ventana de tiempo STDP"
+  outputs:
+    - "Pulso de salida de la neurona (spike_post)"
+    - "Bit 0 de monitoreo de peso sinaptico"
+    - "Bit 1 de monitoreo de peso sinaptico"
+    - "Bit 2 de monitoreo de peso sinaptico"
+    - "Bit 3 de monitoreo de peso sinaptico"
+    - "Bit 4 de monitoreo de peso sinaptico"
+    - "Bit 5 de monitoreo de peso sinaptico"
+    - "Pin no utilizado (fijado a 0)"
+  bidirectional:
+    - "Bit 0 de configuracion de umbral (threshold)"
+    - "Bit 1 de configuracion de umbral (threshold)"
+    - "Bit 2 de configuracion de umbral (threshold)"
+    - "Bit 3 de configuracion de umbral (threshold)"
+    - "No utilizado (configurado como entrada)"
+    - "No utilizado (configurado como entrada)"
+    - "No utilizado (configurado como entrada)"
+    - "No utilizado (configurado como entrada)"
