@@ -4,11 +4,12 @@ yaml_version: 6
 # Información general del proyecto
 project:
   title: "Neurona LIF con Aprendizaje STDP Dinamico"
-  author: "Tu Nombre"
+  author: "Casandra Saray Galiano Quillahuaman"
   discord: "casandra6171"
   description: "Neurona artificial biologica con plasticidad configurable y monitoreo de peso en tiempo real."
   language: "Verilog"
   clock_hz: 10000000
+  tiles: "1x1"          # Tamaño del área en el chip (1x1 tile)
 
 # Archivos de entrada dentro de la carpeta src/
 source_files:
