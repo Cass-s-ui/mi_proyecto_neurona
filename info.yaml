@@ -11,42 +11,44 @@ project:
 
   top_module: "tt_um_cass_s_ui_neuron_lif"
 
-  source_files:
-    - "project.v"
-    - "neuron_lif.v"
-    - "stdp_core.v"
+# Source files must be in ./src
+source_files:
+  - "project.v"
+  - "neuron_lif.v"
+  - "stdp_core.v"
 
-  pinout:
+# Pinout
+pinout:
 
-    # Inputs
-    ui[0]: "Pulso de entrada externo spike_pre"
-    ui[1]: "Bit 0 de configuracion de fuga leak"
-    ui[2]: "Bit 1 de configuracion de fuga leak"
-    ui[3]: "Bit 2 de configuracion de fuga leak"
-    ui[4]: "Bit 3 de configuracion de fuga leak"
-    ui[5]: "Bit 0 de ventana de tiempo STDP"
-    ui[6]: "Bit 1 de ventana de tiempo STDP"
-    ui[7]: "Bit 2 de ventana de tiempo STDP"
+# Inputs
+ui[0]: "spike_pre"
+ui[1]: "leak[0]"
+ui[2]: "leak[1]"
+ui[3]: "leak[2]"
+ui[4]: "leak[3]"
+ui[5]: "stdp_window[0]"
+ui[6]: "stdp_window[1]"
+ui[7]: "stdp_window[2]"
 
-    # Outputs
-    uo[0]: "Pulso de salida de la neurona spike_post"
-    uo[1]: "Bit 0 de monitoreo de peso sinaptico"
-    uo[2]: "Bit 1 de monitoreo de peso sinaptico"
-    uo[3]: "Bit 2 de monitoreo de peso sinaptico"
-    uo[4]: "Bit 3 de monitoreo de peso sinaptico"
-    uo[5]: "Bit 4 de monitoreo de peso sinaptico"
-    uo[6]: "Bit 5 de monitoreo de peso sinaptico"
-    uo[7]: "Pin no utilizado"
+# Outputs
+uo[0]: "spike_post"
+uo[1]: "weight[0]"
+uo[2]: "weight[1]"
+uo[3]: "weight[2]"
+uo[4]: "weight[3]"
+uo[5]: "weight[4]"
+uo[6]: "weight[5]"
+uo[7]: "unused"
 
-    # Bidirectional pins
-    uio[0]: "Bit 0 de configuracion de umbral threshold"
-    uio[1]: "Bit 1 de configuracion de umbral threshold"
-    uio[2]: "Bit 2 de configuracion de umbral threshold"
-    uio[3]: "Bit 3 de configuracion de umbral threshold"
-    uio[4]: ""
-    uio[5]: ""
-    uio[6]: ""
-    uio[7]: ""
+# Bidirectional pins
+uio[0]: "threshold[0]"
+uio[1]: "threshold[1]"
+uio[2]: "threshold[2]"
+uio[3]: "threshold[3]"
+uio[4]: ""
+uio[5]: ""
+uio[6]: ""
+uio[7]: ""
 
 # Do not change!
 yaml_version: 6
