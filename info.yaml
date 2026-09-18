@@ -1,15 +1,15 @@
 # Tiny Tapeout project information
 
 project:
-  title: "Neurona LIF con Aprendizaje STDP Dinamico"
+  title: "Neurona LIF con Aprendizaje STDP Dinamico (IEEE)"
   author: "Casandra Saray Galiano Quillahuaman"
   discord: "casandra6171"
-  description: "Neurona artificial biologica con plasticidad configurable y monitoreo de peso en tiempo real."
+  description: "Neurona artificial biologica con plasticidad configurable y monitoreo de peso en tiempo real. — Equipo Triada CEG"
   language: "Verilog"
   clock_hz: 10000000
   tiles: "1x1"
 
-  top_module: "tt_um_example"
+  top_module: "tt_um_cass_s_ui_neuron_lif"
 
   source_files:
     - "project.v"

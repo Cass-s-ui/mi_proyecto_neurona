@@ -1,6 +1,6 @@
 `default_nettype none
 
-module tt_um_example (
+module tt_um_cass_s_ui_neuron_lif (
     input  wire [7:0] ui_in,    // Pines de entrada dedicados
     output wire [7:0] uo_out,   // Pines de salida dedicados
     input  wire [7:0] uio_in,   // Pines bidireccionales (Entrada)
