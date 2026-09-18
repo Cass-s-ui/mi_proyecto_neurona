@@ -8,9 +8,7 @@ project:
   language: "Verilog"
   clock_hz: 10000000
   tiles: "1x1"
-
-  top_module: "tt_um_cass_s_ui_neuron_lif"
-
+top_module: "tt_um_cass_s_ui_neuron_lif"
 # Source files must be in ./src
 source_files:
   - "project.v"
