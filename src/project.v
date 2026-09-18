@@ -1,14 +1,14 @@
 `default_nettype none
 
 module tt_um_cass_s_ui_neuron_lif (
-    input  wire [7:0] ui_in,    // Pines de entrada dedicados
-    output wire [7:0] uo_out,   // Pines de salida dedicados
-    input  wire [7:0] uio_in,   // Pines bidireccionales (Entrada)
-    output wire [7:0] uio_out,  // Pines bidireccionales (Salida)
-    output wire [7:0] uio_oe,   // Pines bidireccionales (Habilitación de salida)
-    input  wire       ena,      // Activo cuando el multiplexor te selecciona
-    input  wire       clk,      // Reloj global del chip
-    input  wire       rst_n     // Reset global (Activo en bajo)
+    input  wire [7:0] ui_in,    // Inputs
+    output wire [7:0] uo_out,   // Outputs
+    input  wire [7:0] uio_in,   // Bidirectional in
+    output wire [7:0] uio_out,  // Bidirectional out
+    output wire [7:0] uio_oe,   // Bidirectional enable
+    input  wire       ena,      // always 1
+    input  wire       clk,      // clock
+    input  wire       rst_n     // reset active low
 );
 
     // 1. Cables internos para conectar los dos módulos entre sí
